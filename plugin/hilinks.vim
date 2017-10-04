@@ -47,10 +47,10 @@ if !hasmapto('<Plug>HiLinkTrace')
  map <script> <s-F10>		<Leader>hlt
  map <unique> <Leader>hlt	<Plug>HiLinkTrace
 endif
-map <script> <Plug>HiLinkTrace	:sil! call <SID>HiLinkTrace(0)<CR>
-com! -bang	HLT					sil! call s:HiLinkTrace(<bang>0)
-com!		HLTm				sil! call s:HiLinkTrace(1)
-com! -bang	HLTX				let s:x256=1|sil! call s:HiLinkTrace(<bang>0)|unlet s:x256
+map <script> <Plug>HiLinkTrace	: call <SID>HiLinkTrace(0)<CR>
+com! -bang	HLT					 call s:HiLinkTrace(<bang>0)
+com!		HLTm				 call s:HiLinkTrace(1)
+com! -bang	HLTX				let s:x256=1| call s:HiLinkTrace(<bang>0)|unlet s:x256
 
 " ---------------------------------------------------------------------
 "  Options: {{{1
